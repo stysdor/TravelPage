@@ -7,20 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-		</script>
+  <!--   <script type="text/javascript" src="js/jquery-3.3.1.js"></script> -->
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/fontello.css" rel="stylesheet" type="text/css"/>
  </head>
  <body>
     <div class="container">
+
         <!--global top navigation -->
         <nav class="global-nav">
-            <div class="wrapper global-nav-wrapper">
+            <div class="wrapper global-nav-wrapper sticky" id="global-nav">
                 <div class="col-6">
                     <div class="logo-box">
                         <img class= "logo" src="img/logo_50.png" alt="logo">
@@ -33,8 +30,16 @@
                                 <i class="icon-search"></i></a></li>
                             <li class="top-nav-item"><a href="#" class="top-nav-link">
                                 <i class="icon-user"></i></a></li>
-                            <li class="top-nav-item"><a href="#" class="top-nav-link">
-                                <i class="icon-menu"></i></a></li>
+                            <li class="top-nav-item dropdown" >
+                                <i class="icon-menu" id="icon-menu">
+                                    <div class="dropdown-content" id="drop-menu">
+                                        <a class="drop-item" href="#">Materials</a>
+                                        <a class="drop-item" href="#">Travels</a>
+                                        <a class="drop-item" href="#">Animals</a>
+                                        <a class="drop-item" href="#">Gallery</a>
+                                        <a class="drop-item" href="#">Other</a>
+                                    </div>
+                                </i></li>
                         </ul>
                     </div>
                 </div>
@@ -46,9 +51,9 @@
             <h1 id="page-title">Adventure</h1>
         </div>
 
-        <nav class="wrapper main-nav">
-            <ul class="main-nav-box">
-                <li class="main-nav-item"><button class="main-nav-button active">All stories</button></li>
+        <nav class="wrapper main-nav" id="main-nav">
+            <ul class="main-nav-box" id="main-nav-ul">
+                <li class="main-nav-item active"><button class="main-nav-button">All stories</button></li>
                 <li class="main-nav-item"><button class="main-nav-button">Videos</button></li>
                 <li class="main-nav-item"><button class="main-nav-button">Galleries</button></li>
                 <li class="main-nav-item"><button class="main-nav-button">Quick Reader</button></li>
@@ -131,5 +136,8 @@
 
 
     </div>
+
+    <script src="js/scroll.js">
+    </script>
  </body>
  </html>
